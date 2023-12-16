@@ -10,6 +10,7 @@ using UnityEngine;
 using System.Threading.Tasks;
 using Unity.Networking.Transport.Relay;
 using TMPro;
+using UnityEngine.UI;
 
 public class Relay : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class Relay : MonoBehaviour
     
     public TMP_Text joinCodeText;
     public TMP_Text errorText;
-    public TMP_InputField joinCodeInput;
+    public InputField joinCodeInput;
 
     private void Awake()
     {
