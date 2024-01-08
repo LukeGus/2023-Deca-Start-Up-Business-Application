@@ -34,6 +34,21 @@ public class ConnectingSchoolsTextManager : NetworkBehaviour
     {
         if (IsServer)
         {
+            StartCoroutine(Timer(3.0f));
+        }
+    }
+    
+    public IEnumerator Timer (float time)
+    {
+        yield return new WaitForSeconds(time);
+        
+        ActualShowText();
+    }
+    
+    public void ActualShowText()
+    {
+        if (IsServer)
+        {
             connectingText.SetActive(true);
             schoolsText.SetActive(false);
             canShowText = false;
